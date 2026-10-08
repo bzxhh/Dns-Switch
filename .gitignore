@@ -1,0 +1,5 @@
+# WorkBuddy 项目数据（不属于本项目源码）
+.workbuddy-ai/
+
+# PS2EXE 打包中间产物
+*.win32manifest
