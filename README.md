@@ -8,9 +8,21 @@ Windows 网卡 DNS 一键切换工具。单文件、零依赖、自动提权。
 
 ## 快速开始
 
-双击 **`DNS-Switcher.exe`** → 弹出 UAC 点「是」→ 选网卡 → 点卡片，立即生效。
+**下载即用**
 
-不需要装任何东西。修改 DNS 必须要有管理员权限，程序会自动申请，不用手动右键「以管理员身份运行」。
+到 [Releases](https://github.com/bzxhh/Dns-Switch/releases/latest) 下载 `DNS-Switcher.exe`，双击运行 → 弹出 UAC 点「是」→ 选网卡 → 点卡片，立即生效。
+
+修改 DNS 必须要有管理员权限，程序会自动申请，不用手动右键「以管理员身份运行」。
+
+**从源码运行**
+
+```powershell
+git clone https://github.com/bzxhh/Dns-Switch.git
+cd Dns-Switch
+.\DNS-Switcher.ps1
+```
+
+直接跑 `.ps1` 时脚本会自检权限并自动提权重启。也可以跑 `.\build-exe.ps1` 自己打包成单文件 exe。
 
 ---
 
@@ -88,7 +100,7 @@ $Presets = [ordered]@{
 
 | 文件 | 说明 |
 | --- | --- |
-| `DNS-Switcher.exe` | 主程序，双击运行 |
+| `DNS-Switcher.exe` | 打包产物。**不随仓库分发** —— 从 Releases 下载，或用 `build-exe.ps1` 自行生成 |
 | `DNS-Switcher.ps1` | 源文件。改预设、改界面都改它 |
 | `build-exe.ps1` | 改完源文件后重新打包成 exe |
 | `DNS-Switcher.bat` | 备用入口，不想用 exe 时走这个 |

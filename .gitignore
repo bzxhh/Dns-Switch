@@ -1,5 +1,8 @@
 # WorkBuddy 项目数据（不属于本项目源码）
 .workbuddy-ai/
 
+# 打包产物 —— 通过 GitHub Releases 分发，不跟踪
+DNS-Switcher.exe
+
 # PS2EXE 打包中间产物
 *.win32manifest
